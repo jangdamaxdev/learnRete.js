@@ -4,7 +4,7 @@ import { isCI, isDevelopment } from 'std-env';
 import { splitVendorChunkPlugin } from 'vite';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-export default defineNuxtConfig({ 
+export default defineNuxtConfig({
   ssr: true,
   srcDir: 'src',
   modules: [
@@ -111,7 +111,7 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   app: {
-    baseURL: '/learnrete.js/',
+    baseURL: '/learnretejs/',
     head: {
       viewport: 'width=device-width,initial-scale=1',
       title: 'Rete.js',
