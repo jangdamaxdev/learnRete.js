@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     title: 'Rete.js',
     sections: [
       {
-        title: 'Documentation1',
+        title: 'Documentation',
         contentCollection: 'content',
         contentFilters: [
           { field: 'extension', operator: '=', value: 'md' },
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         ]
       },
       {
-        title: 'Examples2',
+        title: 'Examples',
         contentCollection: 'content',
         contentFilters: [
           { field: 'extension', operator: '=', value: 'md' },
