@@ -24,7 +24,7 @@ seoLang()
     min-height: 100vh
     align-items: center
     flex-direction: column
-    font-family: Ubuntu
+    font-family: Lexend, sans-serif
     font-size: 1rem
   </style>
 

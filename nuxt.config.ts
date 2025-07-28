@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     title: 'Rete.js',
     sections: [
       {
-        title: 'Documentation',
+        title: 'Documentation1',
         contentCollection: 'content',
         contentFilters: [
           { field: 'extension', operator: '=', value: 'md' },
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         ]
       },
       {
-        title: 'Examples',
+        title: 'Examples2',
         contentCollection: 'content',
         contentFilters: [
           { field: 'extension', operator: '=', value: 'md' },
@@ -102,6 +102,7 @@ export default defineNuxtConfig({
     locales: [
       { code: 'en', file: 'en.json' },
       { code: 'uk', file: 'uk.json' },
+      { code: 'vi', file: 'vi.json' },
     ],
     detectBrowserLanguage: {
       fallbackLocale: 'en',
@@ -116,10 +117,10 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
         {
-          rel: 'preload', href: '/fonts/Ubuntu-Regular.woff2', as: 'font', type: 'font/woff2', crossorigin: '',
+          rel: 'preload', href: '/fonts/Lexend-Light.ttf', as: 'font', type: 'font/truetype', crossorigin: '',
         },
         {
-          rel: 'preload', href: '/fonts/Ubuntu-Bold.woff2', as: 'font', type: 'font/woff2', crossorigin: '',
+          rel: 'preload', href: '/fonts/Ubuntu-Regular.woff2', as: 'font', type: 'font/woff2', crossorigin: '',
         },
       ],
       meta: [

@@ -2,19 +2,26 @@ html,
 body,
 #__nuxt {
   height: 100%;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Lexend", sans-serif;
 }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/Ubuntu-Regular.woff2) format('woff2');
+  src: url(/fonts/Ubuntu-Regular.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/Ubuntu-Bold.woff2) format('woff2');
+  src: url(/fonts/Ubuntu-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url(/fonts/Lexend-Light.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
