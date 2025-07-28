@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: ["main"]
+    branches: ["VI"]
   workflow_dispatch:
 
 permissions:
