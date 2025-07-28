@@ -111,7 +111,7 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   app: {
-    baseURL: '/learnRete.js/',
+    baseURL: '/learnrete.js/',
     head: {
       viewport: 'width=device-width,initial-scale=1',
       title: 'Rete.js',
