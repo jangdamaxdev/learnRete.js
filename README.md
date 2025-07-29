@@ -36,13 +36,19 @@ app: {
 
 #### Cách 1 (tự động)
 
-IMPORTANT: TÊN THƯ MỤC DỰ ÁN TRÊN MÁY PHẢI TRÙNG VỚI TÊN REPO ĐỂ TẠO SYMLINK CHO ĐÚNG.
-* Tại github repo:
+IMPORTANT:
+
+    - TÊN THƯ MỤC DỰ ÁN TRÊN MÁY PHẢI TRÙNG VỚI TÊN REPO ĐỂ TẠO SYMLINK CHO ĐÚNG.
+    - Nên xóa Cache của GitActions(TRƯỚC KHI COMMIT) mỗi lần đổi tên repo hay thay đổi `baseURL` để tránh lỗi không tìm thấy trang ở bước Artifact.
+
+- Tại github repo:
+
 1. Vào repo của bạn tại github, chọn `Settings` > `Pages`.
 2. Chọn Source `Github Actions` trong mục `Build and deployment`.
-3. Clear Cache của GitActions bằng cách vào `Actions` > `Cache` (nút này sẽ hiện ra khi bạn đã có ít nhất 1 lần chạy GitActions). Xóa các Cache nếu có.??
-* Tại máy local:
-4. Kiểm tra file `/.github/workflows/nuxtjs.yml`:
+
+- Tại máy local:
+
+3. Kiểm tra file `/.github/workflows/nuxtjs.yml`:
 
 - Chọn nhánh sẽ deploy trong đoạn `branches: ["<nhánh sẽ deploy>"]`
 - Kiểm tra lại đoạn `path: ./dist`. File này là symlink đến thư mục sau build.
@@ -50,7 +56,7 @@ IMPORTANT: TÊN THƯ MỤC DỰ ÁN TRÊN MÁY PHẢI TRÙNG VỚI TÊN REPO Đ�
   - Chạy lệnh `ls -l -a` tại thư mục gốc, xem nó có và trỏ tới thư mục đầu ra của `npm run generate` không? Ví dụ `.output/public`. Đây là thư mục chứa các file tĩnh đã được build.
 - Nếu có lỗi xóa hết thư mục `.nuxt`, `.output`, `dist` và chạy lại lệnh `npm run generate` để tạo lại các thư mục này để kiểm tra.
 
-5. Commit và push lên repo của bạn. GitHub Actions sẽ tự động build và deploy theo cấu hình của file `nuxtjs.yml` ở trên lên GitHub Pages.
+4. Commit và push lên repo của bạn. GitHub Actions sẽ tự động build và deploy theo cấu hình của file `nuxtjs.yml` ở trên lên GitHub Pages.
 
 #### Cách 2 (chỉnh sửa thủ công)
 
@@ -64,13 +70,16 @@ Không dùng symlink `./dist` nữa
 ✔ You can preview this build using npx serve .output/public                                                                                            nitro 10:57:34 PM
 ✔ You can now deploy .output/public to any static hosting!                                                                                              nuxi 10:57:34 PM
 ```
+
 Hoặc ở mục Deploy trong GitHub Actions, bước `Static HTML export with Nuxt` sẽ có dòng `✔ Generated public .output/public` nếu build thành công. Kết quả giống như chạy ở local vì dùng chung lệnh `npm run generate` để build.
+
 ```
 [info] [nitro] Prerendered 1080 routes in 49.285 seconds
 [success] [nitro] Generated public .output/public
 [success] [nitro] You can preview this build using `npx serve .output/public`
 [success] [nuxi] You can now deploy `.output/public` to any static hosting!
 ```
+
 2. Sửa `/.github/workflows/nuxtjs.yml` đoạn `path` dẫn về đúng thư mục sau khi build phía trên bước 2:
 
 ```yaml
@@ -80,4 +89,5 @@ Hoặc ở mục Deploy trong GitHub Actions, bước `Static HTML export with N
     name: github-pages
     path: ./.output/public/
 ```
+
 3. Commit và push lên repo của bạn.
