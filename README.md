@@ -18,7 +18,7 @@ npm run dev
 npm run generate
 ```
 
-### Deploy to GitHub Pages
+### Deploy to GitHub Pages!
 
 Các thư mục build product ở trên không được commit lên repo, mà sẽ được build tự động thông qua GitHub Actions lên GitHub Pages. Do đó, bạn cần cấu hình GitHub Actions để tự động build và deploy trang web của bạn.
 **Checkout tại `<nhánh sẽ deploy>`**
