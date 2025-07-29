@@ -5,6 +5,7 @@ IViewContent.content
 
 <script setup lang="ts">
 import { Content as IViewContent } from 'view-ui-plus-es'
+
 </script>
 
 <style lang="sass" scoped>

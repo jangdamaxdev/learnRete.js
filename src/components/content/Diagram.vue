@@ -1,11 +1,12 @@
 <template lang="pug">
 figure.diagram
   .scrollable
-    img(:src="'/diagrams/'+name+'.svg'")
+    img(:src="baseURL+'diagrams/'+name+'.svg'")
   figcaption.caption {{ caption }}
 </template>
 
 <script setup lang="ts">
+const baseURL = '/learnretejs/'
 interface Props {
   name: string
   caption: string
