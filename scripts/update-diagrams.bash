@@ -1,7 +1,7 @@
 set -e
 
 source_dir="./src/assets/diagrams/"
-dest_dir="/diagrams/"
+dest_dir="./diagrams/"
 
 docker run $1 -v $(pwd):/data rlespinasse/drawio-export -f svg --remove-page-suffix -o _export
 
