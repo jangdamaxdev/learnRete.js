@@ -1,8 +1,8 @@
 set -e
 
 source_dir="./src/assets/diagrams/"
-dest_dir="/learnretejs/diagrams/"
-
+dest_dir="./learnretejs/diagrams/"
+mkdir -p "$dest_dir"
 docker run $1 -v $(pwd):/data rlespinasse/drawio-export -f svg --remove-page-suffix -o _export
 
 rm -rf $dest_dir
